@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/login_background"
+    android:padding="24dp"
+    android:gravity="center_horizontal"
+    tools:context=".Activities.RegisterActivity">
+
+    <!-- ===== TÍTULO ===== -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register_title"
+        android:textColor="@color/login_dark"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register_subtitle"
+        android:textColor="@color/login_dark"
+        android:textSize="14sp"
+        android:fontFamily="serif"
+        android:textStyle="italic"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- ===== NOMBRES ===== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="12dp">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="@string/register_names"
+            android:src="@drawable/ic_user"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:cardBackgroundColor="@color/login_white"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/login_dark"
+            app:strokeWidth="2dp">
+
+            <EditText
+                android:id="@+id/etNombres"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:hint="@string/register_names"
+                android:inputType="textPersonName"/>
+
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+    <!-- ===== APELLIDOS ===== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="12dp">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="@string/register_lastnames"
+            android:src="@drawable/ic_user"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:cardBackgroundColor="@color/login_white"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/login_dark"
+            app:strokeWidth="2dp">
+
+            <EditText
+                android:id="@+id/etApellidos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:hint="@string/register_lastnames"
+                android:inputType="textPersonName"/>
+
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+    <!-- ===== CORREO ===== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="12dp">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="@string/register_email"
+            android:src="@drawable/ic_google"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:cardBackgroundColor="@color/login_white"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/login_dark"
+            app:strokeWidth="2dp">
+
+            <EditText
+                android:id="@+id/etCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:hint="@string/register_email"
+                android:inputType="textEmailAddress"/>
+
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+    <!-- ===== CONTRASEÑA ===== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="12dp">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="@string/login_password"
+            android:src="@drawable/ic_key"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:cardBackgroundColor="@color/login_white"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/login_dark"
+            app:strokeWidth="2dp">
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:hint="@string/login_password"
+                android:inputType="textPassword"/>
+
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+    <!-- ===== REPETIR CONTRASEÑA ===== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="@string/register_repeat_password"
+            android:src="@drawable/ic_key"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:cardBackgroundColor="@color/login_white"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/login_dark"
+            app:strokeWidth="2dp">
+
+            <EditText
+                android:id="@+id/etRepeatPassword"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:hint="@string/register_repeat_password"
+                android:inputType="textPassword"/>
+
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+    <!-- ===== CHECK TÉRMINOS ===== -->
+    <CheckBox
+        android:id="@+id/cbTerminos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register_terms"
+        android:textColor="@color/login_dark"
+        android:textSize="13sp"
+        android:fontFamily="serif"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- ===== BOTÓN REGISTRO ===== -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRegistro"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:paddingStart="48dp"
+        android:paddingEnd="48dp"
+        android:text="@string/register_button"
+        android:textColor="@color/login_white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        app:backgroundTint="@color/login_dark_button"
+        app:cornerRadius="28dp"
+        app:strokeColor="@color/login_white"
+        app:strokeWidth="3dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- ===== VOLVER AL LOGIN ===== -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_already_account"
+            android:textColor="@color/login_dark"
+            android:textSize="14sp"
+            android:fontFamily="serif"/>
+
+        <TextView
+            android:id="@+id/tvVolverLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_go_login"
+            android:textColor="@color/login_white"
+            android:textSize="14sp"
+            android:fontFamily="serif"/>
+
+    </LinearLayout>
+
+</LinearLayout>
