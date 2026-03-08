@@ -28,7 +28,7 @@ class OnboardingActivity : AppCompatActivity() {
 
         // Link Regístrate
         findViewById<TextView>(R.id.tvRegistrate).setOnClickListener {
-            // startActivity(Intent(this, RegisterActivity::class.java))
+             startActivity(Intent(this, RegisterActivity::class.java))
         }
     }
 }

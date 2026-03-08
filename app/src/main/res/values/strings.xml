@@ -21,4 +21,13 @@
     <string name="register_button">Registrarse</string>
     <string name="register_already_account">¿Ya tienes cuenta? </string>
     <string name="register_go_login">Inicia sesión</string>
+    <string name="main_icon">⏱</string>
+    <string name="main_bienvenido_a">Bienvenido a</string>
+    <string name="main_kairos">KAIROS</string>
+    <string name="main_subtitulo">Tu tiempo, tu mejor inversión</string>
+    <string name="login_usuario_vacio">Por favor ingresa tu usuario</string>
+    <string name="login_password_vacio">Por favor ingresa tu contraseña</string>
+    <string name="login_bienvenido">¡Bienvenido a KAIROS!</string>
+    <string name="login_google">Ingresando con Google...</string>
+    <string name="login_recuperar">Recuperar contraseña</string>
 </resources>

@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.activity.enableEdgeToEdge
+import com.example.kairos.MainActivity
 import com.example.kairos.R
 import com.google.android.material.button.MaterialButton
 import android.widget.EditText
@@ -26,8 +27,8 @@ class LoginActivity : AppCompatActivity() {
         }
 
         // ===== REFERENCIAS A LOS COMPONENTES =====
-        val etUsuario  = findViewById<EditText>(R.id.etUsuario)
-        val etPassword = findViewById<EditText>(R.id.etPassword)
+        val etUsuario    = findViewById<EditText>(R.id.etUsuario)
+        val etPassword   = findViewById<EditText>(R.id.etPassword)
         val btnIngresar  = findViewById<MaterialButton>(R.id.btnIngresar)
         val btnGoogle    = findViewById<MaterialButton>(R.id.btnGoogle)
         val tvRecuperar  = findViewById<TextView>(R.id.tvRecuperar)
@@ -35,43 +36,38 @@ class LoginActivity : AppCompatActivity() {
 
         // ===== BOTÓN INGRESAR =====
         btnIngresar.setOnClickListener {
-            val usuario = etUsuario.text.toString().trim()
+            val usuario  = etUsuario.text.toString().trim()
             val password = etPassword.text.toString().trim()
 
             when {
                 usuario.isEmpty() -> {
-                    Toast.makeText(this, "Por favor ingresa tu usuario", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, getString(R.string.login_usuario_vacio), Toast.LENGTH_SHORT).show()
                 }
                 password.isEmpty() -> {
-                    Toast.makeText(this, "Por favor ingresa tu contraseña", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, getString(R.string.login_password_vacio), Toast.LENGTH_SHORT).show()
                 }
                 else -> {
-                    // ✅ Aquí va tu lógica de autenticación (Firebase, API, etc.)
-                    Toast.makeText(this, "¡Bienvenido a KAIROS!", Toast.LENGTH_SHORT).show()
-                    // startActivity(Intent(this, MainActivity::class.java))
-                    // finish()
+                    Toast.makeText(this, getString(R.string.login_bienvenido), Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this, MainActivity::class.java))
+                    finish()
                 }
             }
         }
 
         // ===== BOTÓN GOOGLE =====
         btnGoogle.setOnClickListener {
-            // ✅ Aquí va la lógica de Google Sign-In
-            Toast.makeText(this, "Ingresando con Google...", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.login_google), Toast.LENGTH_SHORT).show()
         }
 
         // ===== RECUPERAR CONTRASEÑA =====
         tvRecuperar.setOnClickListener {
-            // ✅ Aquí va tu pantalla de recuperación
-            Toast.makeText(this, "Recuperar contraseña", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.login_recuperar), Toast.LENGTH_SHORT).show()
             // startActivity(Intent(this, RecuperarActivity::class.java))
         }
 
         // ===== REGISTRARSE =====
         tvRegistrate.setOnClickListener {
-            // ✅ Aquí va tu pantalla de registro
-            Toast.makeText(this, "Ir a registro", Toast.LENGTH_SHORT).show()
-            // startActivity(Intent(this, RegisterActivity::class.java))
+            startActivity(Intent(this, RegisterActivity::class.java))
         }
     }
 }
